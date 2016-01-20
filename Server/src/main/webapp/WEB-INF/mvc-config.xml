@@ -41,7 +41,63 @@
 		<beans:property name="dataSource" ref="dataSource"></beans:property>
 	</beans:bean>
 
-	<beans:bean id="UserDao" class="com.secsm.dao.UserDao">
+	<beans:bean id="AccountDao" class="com.secsm.dao.AccountDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="AttendanceDao" class="com.secsm.dao.AttendanceDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="DutyDao" class="com.secsm.dao.DutyDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="EquipmentItemsDao" class="com.secsm.dao.EquipmentItemsDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="EquipmentLogDao" class="com.secsm.dao.EquipmentLogDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="EquipmentReqDao" class="com.secsm.dao.EquipmentReqDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="NoticeDao" class="com.secsm.dao.NoticeDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PMSDao" class="com.secsm.dao.PMSDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PresentationDao" class="com.secsm.dao.PresentationDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PresentationAttendenceDao" class="com.secsm.dao.PresentationAttendenceDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PresentationDateDao" class="com.secsm.dao.PresentationDateDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="ProjectDao" class="com.secsm.dao.ProjectDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PxItemsDao" class="com.secsm.dao.PxItemsDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PxLogDao" class="com.secsm.dao.PxLogDao">
+		<beans:property name="dataSource" ref="dataSource" />
+	</beans:bean>
+	
+	<beans:bean id="PxReqDao" class="com.secsm.dao.PxReqDao">
 		<beans:property name="dataSource" ref="dataSource" />
 	</beans:bean>
 

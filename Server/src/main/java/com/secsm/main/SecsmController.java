@@ -15,8 +15,8 @@ import com.secsm.dao.UserDao;
 public class SecsmController {
 	private static final Logger logger = LoggerFactory.getLogger(SecsmController.class);
 
-	@Autowired
-	private UserDao userDao;
+//	@Autowired
+//	private UserDao userDao;
 	
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String MainController_index(HttpServletRequest request) {
