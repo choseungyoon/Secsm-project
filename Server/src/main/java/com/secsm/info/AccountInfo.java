@@ -8,6 +8,19 @@ public class AccountInfo {
 	private String phone;
 	private int grade;
 	
+	public AccountInfo(){
+		
+	}
+	
+	public AccountInfo(int id, String name, String email, String pw, String phone, int grade){
+		this.id = id;
+		this.name = name;
+		this.email = email;
+		this.pw = pw;
+		this.phone = phone;
+		this.grade = grade;
+	}
+	
 	public int getId() {
 		return id;
 	}
