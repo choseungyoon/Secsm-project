@@ -5,11 +5,11 @@ import javax.sql.DataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
-import com.secsm.idao.PMSIDao;
-
-public class PMSDao implements PMSIDao {
-	private static final Logger logger = LoggerFactory.getLogger(PMSDao.class);
+@Repository
+public class QuestionDao {
+	private static final Logger logger = LoggerFactory.getLogger(QuestionDao.class);
 
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
@@ -20,4 +20,5 @@ public class PMSDao implements PMSIDao {
 		logger.info("Updated DataSource ---> " + ds);
 		logger.info("Updated jdbcTemplate ---> " + jdbcTemplate);
 	}
+
 }

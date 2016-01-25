@@ -5,17 +5,29 @@ import java.sql.Timestamp;
 public class ProjectInfo {
 
 	private int id;
-	private Timestamp startDate;
-	private Timestamp endDate;
-	private String pl;
-	private String team1;
-	private String team2;
-	private String team3;
-	private String team4;
 	private String name;
 	private String summary;
 	private String description;
+
+	private String pl;
+	private String team;
+
+	private Timestamp startDate;
+	private Timestamp endDate;
 	private Timestamp regDate;
+	
+	public ProjectInfo(int id, String name, String summary, String description, String pl, String team, Timestamp startDate, Timestamp endDate, Timestamp regDate){
+		this.id = id;
+		this.name = name;
+		this.summary = summary;
+		this.description = description;
+		this.pl = pl;
+		this.team = team;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.regDate = regDate;
+	}
+	
 	public int getId() {
 		return id;
 	}
@@ -40,29 +52,11 @@ public class ProjectInfo {
 	public void setPl(String pl) {
 		this.pl = pl;
 	}
-	public String getTeam1() {
-		return team1;
+	public String getTeam() {
+		return team;
 	}
-	public void setTeam1(String team1) {
-		this.team1 = team1;
-	}
-	public String getTeam2() {
-		return team2;
-	}
-	public void setTeam2(String team2) {
-		this.team2 = team2;
-	}
-	public String getTeam3() {
-		return team3;
-	}
-	public void setTeam3(String team3) {
-		this.team3 = team3;
-	}
-	public String getTeam4() {
-		return team4;
-	}
-	public void setTeam4(String team4) {
-		this.team4 = team4;
+	public void setTeam(String team) {
+		this.team = team;
 	}
 	public String getName() {
 		return name;
@@ -88,7 +82,5 @@ public class ProjectInfo {
 	public void setRegDate(Timestamp regDate) {
 		this.regDate = regDate;
 	}
-	
-	
 	
 }

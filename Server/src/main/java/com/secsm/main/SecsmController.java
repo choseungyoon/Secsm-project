@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.secsm.dao.AccountDao;
-import com.secsm.dao.UserDao;
 import com.secsm.info.AccountInfo;
 
 @Controller
