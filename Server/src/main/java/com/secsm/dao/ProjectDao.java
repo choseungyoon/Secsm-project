@@ -80,5 +80,9 @@ public class ProjectDao implements ProjectIDao {
 			new Object[]  { name, summary, description, pl, teamMember, startDate, endDate , id});
 	}
 	
+	public void delete(int id){
+		
+	}
+	
 	
 }

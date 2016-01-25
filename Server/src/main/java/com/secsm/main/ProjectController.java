@@ -21,6 +21,7 @@ public class ProjectController {
 	@Autowired
 	private ProjectDao projectDao;
 	
+	/** 교육 Main */
 	@RequestMapping(value = "/project", method = RequestMethod.GET)
 	public String ProjectController_index(HttpServletRequest request) {
 		logger.info("project Page");
@@ -67,6 +68,8 @@ public class ProjectController {
 			, @RequestParam("id") int id) {
 		logger.info("detailProject Page");
 
+		projectDao.delete(id);
+		
 		return "detailProject";
 	}
 	
