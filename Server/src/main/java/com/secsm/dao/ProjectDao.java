@@ -81,8 +81,11 @@ public class ProjectDao implements ProjectIDao {
 	}
 	
 	public void delete(int id){
-		
+		jdbcTemplate.update("delete from project where id = ?", new Object[] { id });
 	}
 	
+	public void deleteAll(){
+		jdbcTemplate.update("delete from project");
+	}
 	
 }
