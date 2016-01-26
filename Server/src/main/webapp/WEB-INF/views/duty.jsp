@@ -7,8 +7,24 @@
 		<!-- Encoding -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<jsp:include page="base/header.jsp" flush="false" />
+		<link rel='stylesheet' href='./resources/fullcalendar/fullcalendar.css' />
+		<script src='./resources/fullcalendar/lib/jquery.min.js'></script>
+		<script src='./resources/fullcalendar/lib/moment.min.js'></script>
+		<script src='./resources/fullcalendar/fullcalendar.js'></script>
     	<title>Duty</title>
+    	<script type="text/javascript">
     	
+	    	$(document).ready(function() {
+	
+	    	    // page is now ready, initialize the calendar...
+	
+	    	    $('#calendar').fullCalendar({
+	    	        // put your options and callbacks here
+	    	    })
+	
+	    	});
+	    	
+    	</script>
 	</head>
 	<jsp:include page="base/nav.jsp" flush="true" />
 	<body>
@@ -19,7 +35,7 @@
 			</div>
 			
 			<div>
-				<button type="button" class="btn" data-toggle="modal" data-target="#createProjectModal" style="margin: 5px;">프로젝트 등록</button>
+				<div id='calendar'></div>
 			</div>
 			
 			<jsp:include page="base/foot.jsp" flush="false" />
