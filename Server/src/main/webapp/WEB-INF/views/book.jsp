@@ -7,7 +7,7 @@
 		<!-- Encoding -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<jsp:include page="base/header.jsp" flush="false" />
-    	<title>Question</title>
+    	<title>Book</title>
     	
 	</head>
 	<jsp:include page="base/nav.jsp" flush="true" />
@@ -15,11 +15,12 @@
 
 		<div class="container body-content" style="margin-top: 150px">
 			<div class="row-fluid">
-				<h1> 설문 </h1>
+				<h1> 도서 </h1>
 			</div>
 			
 			<div>
-				<button type="button" class="btn" data-toggle="modal" data-target="#createProjectModal" style="margin: 5px;">프로젝트 등록</button>
+				
+				
 			</div>
 			
 			<jsp:include page="base/foot.jsp" flush="false" />

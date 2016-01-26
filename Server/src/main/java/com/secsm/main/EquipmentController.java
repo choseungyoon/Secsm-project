@@ -17,9 +17,16 @@ public class EquipmentController {
 	private static final Logger logger = LoggerFactory.getLogger(EquipmentController.class);
 
 	@RequestMapping(value = "/equipment", method = RequestMethod.GET)
-	public String MainController_index(HttpServletRequest request) {
+	public String MainController_equipment_index(HttpServletRequest request) {
 		logger.info("equipment Page");
 
 		return "equipment";
+	}
+	
+	@RequestMapping(value = "/book", method = RequestMethod.GET)
+	public String MainController_book_index(HttpServletRequest request) {
+		logger.info("book Page");
+
+		return "book";
 	}
 }	

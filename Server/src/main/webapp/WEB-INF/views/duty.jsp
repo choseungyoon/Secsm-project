@@ -7,7 +7,7 @@
 		<!-- Encoding -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<jsp:include page="base/header.jsp" flush="false" />
-    	<title>Question</title>
+    	<title>Duty</title>
     	
 	</head>
 	<jsp:include page="base/nav.jsp" flush="true" />
@@ -15,7 +15,7 @@
 
 		<div class="container body-content" style="margin-top: 150px">
 			<div class="row-fluid">
-				<h1> 설문 </h1>
+				<h1> 당직 </h1>
 			</div>
 			
 			<div>

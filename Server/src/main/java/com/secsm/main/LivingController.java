@@ -12,10 +12,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class LivingController {
 	private static final Logger logger = LoggerFactory.getLogger(LivingController.class);
 	
-	@RequestMapping(value = "/living", method = RequestMethod.GET)
-	public String MainController_index(HttpServletRequest request) {
-		logger.info("living Page");
+	@RequestMapping(value = "/duty", method = RequestMethod.GET)
+	public String MainController_duty_index(HttpServletRequest request) {
+		logger.info("duty Page");
 
-		return "living";
+		return "duty";
+	}
+	
+	@RequestMapping(value = "/attendance", method = RequestMethod.GET)
+	public String MainController_attendance_index(HttpServletRequest request) {
+		logger.info("attendance Page");
+
+		return "attendance";
 	}
 }
