@@ -7,31 +7,9 @@
 	<head>
 		<!-- Encoding -->
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
-		<!-- jQuery -->
-		<script type="text/javascript" charset="utf8" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-		
-		<!-- DataTables -->
-		<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/jquery.dataTables.css" />">
-		<script type="text/javascript" charset="utf8" src="<c:url value="/resources/js/jquery.dataTables.min.js" />"></script>
-		
-		<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap.min.css" />">
-		<script type="text/javascript" src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
-		
-		<!-- <script type="text/javascript" src="<c:url value="/resources/js/bootstrap-select.js" />"></script> -->
-		<script type="text/javascript" src="<c:url value="/resources/js/bootstrap-select.js" />"></script>
-		<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/bootstrap-select.css" />">
-
-		<link rel="shortcut icon" type="image/ico" href="http://www.sprymedia.co.uk/media/images/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="<c:url value="/resources/css/ColumnFilterWidgets.css" />">
-		<script type="text/javascript" charset="utf8" src="<c:url value="/resources/js/ColumnFilterWidgets.js" />"></script>
-		
-		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-   		<script type="text/javascript" src="<c:url value="/resources/js/bootstrap-datepicker.js" />"></script>
-		    
     	<title>Project</title>
-
 	</head>
+	
 	<%
 		@SuppressWarnings("unchecked")
 		List<SprintLevel> sprintList = (List<SprintLevel>) request.getAttribute("sprintList");
