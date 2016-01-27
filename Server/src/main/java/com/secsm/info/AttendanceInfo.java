@@ -7,6 +7,11 @@ public class AttendanceInfo {
 	private int accountId;
 	private Timestamp regDate;
 	
+	public AttendanceInfo(int accountId, Timestamp regDate){
+		this.accountId = accountId;
+		this.regDate = regDate;
+	}
+	
 	public int getAccountId() {
 		return accountId;
 	}

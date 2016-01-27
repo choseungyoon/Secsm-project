@@ -12,6 +12,19 @@ public class EquipmentItemsInfo {
 	private int count;
 	private int status;
 	private String description;
+	
+	public EquipmentItemsInfo(int id, String code, String name, int type, Timestamp regDate, int count, int status,
+			String description) {
+		this.id = id;
+		this.code = code;
+		this.name = name;
+		this.type = type;
+		this.regDate = regDate;
+		this.count = count;
+		this.status = status;
+		this.description = description;
+	}
+	
 	public int getId() {
 		return id;
 	}

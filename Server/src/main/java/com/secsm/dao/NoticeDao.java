@@ -1,5 +1,7 @@
 package com.secsm.dao;
 
+import java.util.List;
+
 import javax.sql.DataSource;
 
 import org.slf4j.Logger;
@@ -7,6 +9,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.secsm.idao.NoticeIDao;
+import com.secsm.info.DutyInfo;
 
 public class NoticeDao implements NoticeIDao {
 	private static final Logger logger = LoggerFactory.getLogger(NoticeDao.class);
@@ -20,5 +23,24 @@ public class NoticeDao implements NoticeIDao {
 		logger.info("Updated DataSource ---> " + ds);
 		logger.info("Updated jdbcTemplate ---> " + jdbcTemplate);
 	}
-
+	
+	public void create(){
+		
+	}
+	
+	public List<DutyInfo> selectAll(){
+		
+	}
+	
+	public List<DutyInfo> select(){
+		
+	}
+	
+	public void delete(){
+		
+	}
+	
+	public void deleteAll(){
+		
+	}
 }

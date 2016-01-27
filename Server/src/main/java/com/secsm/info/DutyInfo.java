@@ -10,6 +10,14 @@ public class DutyInfo {
 	private int accountId2;
 	private int accountId3;
 	
+	public DutyInfo(int id, Timestamp dutyDate, int accountId1, int accountId2, int accountId3){
+		this.id = id;
+		this.dutyDate = dutyDate;
+		this.accountId1 = accountId1;
+		this.accountId2 = accountId2;
+		this.accountId3 = accountId3;
+	}
+	
 	public int getId() {
 		return id;
 	}

@@ -28,13 +28,17 @@ public class AccountDao implements AccountIDao {
 		logger.info("Updated jdbcTemplate ---> " + jdbcTemplate);
 	}
 
+	public void create(String name, String email, String pw, String phone){
+		jdbcTemplate.update("insert into account (name, email, pw, phone) values (?, ?, ?, ?)", new Object[] { name, email, pw, phone });
+	}
+	
 	public List<AccountInfo> selectAll() {
-		return jdbcTemplate.query("select * from activity_log", new Object[] {  },
+		return jdbcTemplate.query("select * from account", new Object[] {  },
 				new RowMapper<AccountInfo>() {
 					public AccountInfo mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-						return new AccountInfo(resultSet.getInt("id"), resultSet.getString("project_key"),
-								resultSet.getString("name"), resultSet.getString("activity_name"),
-								resultSet.getString("activity_name"), resultSet.getInt("activityb_name"));
+						return new AccountInfo(resultSet.getInt("id"), resultSet.getString("name"),
+								resultSet.getString("email"), resultSet.getString("pw"),
+								resultSet.getString("phone"), resultSet.getInt("grade"));
 					}
 				});
 	}
@@ -43,10 +47,36 @@ public class AccountDao implements AccountIDao {
 		return jdbcTemplate.query("select * from activity_log where project_key = ?", new Object[] { email },
 				new RowMapper<AccountInfo>() {
 					public AccountInfo mapRow(ResultSet resultSet, int rowNum) throws SQLException {
-						return new AccountInfo(resultSet.getInt("id"), resultSet.getString("project_key"),
-								resultSet.getString("name"), resultSet.getString("activity_name"),
-								resultSet.getString("activity_name"), resultSet.getInt("activityb_name"));
+						return new AccountInfo(resultSet.getInt("id"), resultSet.getString("name"),
+								resultSet.getString("email"), resultSet.getString("pw"),
+								resultSet.getString("phone"), resultSet.getInt("grade"));
 					}
 				});
+	}
+	
+	public void updateAccount(AccountInfo info){
+		jdbcTemplate.update("update account set "
+				+ " name = ?,"
+				+ " email = ?,"
+				+ " pw = ?,"
+				+ " phone = ?,"
+				+ " grade = ?"
+			+ " where id = ?", 
+			new Object[]  { info.getName(), info.getEmail(), info.getPw(), info.getPhone(), info.getGrade(), info.getId() });
+	}
+	
+	public void setGrade(int id, int grade){
+		jdbcTemplate.update("update account set "
+				+ " grade = ?"
+			+ " where id = ?", 
+			new Object[]  { grade, id});
+	}
+	
+	public void delete(int id){
+		
+	}
+	
+	public void deleteAll(){
+		
 	}
 }

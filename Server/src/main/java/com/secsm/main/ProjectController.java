@@ -23,9 +23,10 @@ public class ProjectController {
 	
 	/** 교육 Main */
 	@RequestMapping(value = "/project", method = RequestMethod.GET)
-	public String ProjectController_index(HttpServletRequest request) {
+	public String ProjectController_project_index(HttpServletRequest request) {
 		logger.info("project Page");
 
+		request.setAttribute("projectList", projectDao.selectAll());
 		return "project";
 	}
 	
