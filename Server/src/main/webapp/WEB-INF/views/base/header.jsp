@@ -14,30 +14,30 @@
 <meta name="author" content="">
 
 <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-<link href="./resources/css/bootstrap.min.css" rel="stylesheet">
-<link href="./resources/css/bootstrap.css" rel="stylesheet">
+<link href="/Secsm/resources/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Secsm/resources/css/bootstrap.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="./resources/css/freelancer.css" rel="stylesheet">
+<link href="/Secsm/resources/css/freelancer.css" rel="stylesheet">
 
 <!-- Custom CSS -->
-<link href="./resources/css/simple-sidebar.css" rel="stylesheet">
+<link href="/Secsm/resources/css/simple-sidebar.css" rel="stylesheet">
 
 <!-- Custom Fonts -->
-<link href="./resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="/Secsm/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 <!-- Custrom CSS -->
-<link rel="stylesheet" href="./resources/css/bootstrap-select.css">
+<link rel="stylesheet" href="/Secsm/resources/css/bootstrap-select.css">
   
 <!-- jQuery -->
-<script src="./resources/js/jquery.js"></script>
+<script src="/Secsm/resources/js/jquery.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
 <!-- Select js -->
-<script src="./resources/js/bootstrap-select.js"></script>
+<script src="/Secsm/resources/js/bootstrap-select.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/metisMenu/1.1.0/metisMenu.js"></script>
 
 <!-- Plugin JavaScript -->
