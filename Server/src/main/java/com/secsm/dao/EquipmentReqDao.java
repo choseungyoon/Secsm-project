@@ -28,7 +28,7 @@ public class EquipmentReqDao implements EquipmentReqIDao {
 	}
 
 	public void create(){
-		jdbcTemplate.update("insert info duty (dutyDate, accountId1, accountId2, accountId3)");
+		jdbcTemplate. update("insert info duty (dutyDate, accountId1, accountId2, accountId3)");
 	}
 	
 	public List<DutyInfo> selectAll(){

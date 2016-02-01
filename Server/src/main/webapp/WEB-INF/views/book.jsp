@@ -18,7 +18,15 @@
 			</div>
 			<div class="row-fluid">
 				<ul >
-					<li role="presentation"><a role="menuitem" href="bookSearch">도서 검색</a></li>
+					<form action="bookSearch" method="get">
+					<tr>
+						<td> 제목 </td>
+						<td> <input type="text" name="bTitle" size = "50"> </td>
+					</tr>
+					<tr >
+						<td colspan="2"> <input type="submit" value="입력"></td>
+					</tr>
+					</form>
 					<li role="presentation"><a role="menuitem" href="bookRental">대여 및 반납</a></li>
 					<li role="presentation"><a role="menuitem" href="bookApply">도서 요청</a></li>
 				</ul>
@@ -26,8 +34,30 @@
 			</div>
 			
 			<jsp:include page="base/foot.jsp" flush="false" />
-		</div>	
-
+		</div>
+		
+		<div>
+	
+		<tr>
+			<td>Index</td>
+			<td>이름</td>
+			<td>Type</td>
+			<td>재고</td>
+			<td>상태</td>
+			<td>세부사항</td>
+		</tr>
+<!--		<c:forEach items="${list}" var="dto">
+		<tr>
+			<td>${dto.ID}</td>
+			<td>${dto.Name}</td>
+			<td>${dto.Type}</td>
+			<td>${dto.Count}</td>
+			<td>${dto.Statute}</td>
+			<td>${dto.Description}</td>
+		</tr>
+		</c:forEach>-->
+		
+		</div>
 
 </body>
 </html>
