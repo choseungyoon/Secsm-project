@@ -28,7 +28,7 @@
 
 	<beans:bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<beans:property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-		<beans:property name="url" value="jdbc:mysql://localhost:8090/secsm?useUnicode=true&amp;characterEncoding=utf-8"/>
+		<beans:property name="url" value="jdbc:mysql://localhost:3306/secsm"/>
 		<beans:property name="username" value="root"/>
 		<beans:property name="password" value="sogang"/>
 	</beans:bean>

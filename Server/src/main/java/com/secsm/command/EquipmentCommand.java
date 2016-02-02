@@ -8,12 +8,11 @@ import org.springframework.ui.Model;
 
 import com.secsm.dao.EquipmentItemsDao;
 import com.secsm.info.EquipmentItemsInfo;
-import com.secsm.main.EquipmentController;
 
 public class EquipmentCommand {
 	
 	
-	private static final Logger logger = LoggerFactory.getLogger(EquipmentController.class);
+	private static final Logger logger = LoggerFactory.getLogger(EquipmentCommand.class);
 	
 	public void execute_search(Model model){
 		
@@ -22,7 +21,7 @@ public class EquipmentCommand {
 	public void execute_list(Model model){
 		logger.info("equipment_list Page");
 		EquipmentItemsDao dao = new EquipmentItemsDao();
-//		List<EquipmentItemsInfo> equipItemInfo = dao.list();
-//		model.addAttribute("list",equipItemInfo);
+		List<EquipmentItemsInfo> equipItemInfo = dao.list();
+		model.addAttribute("list",equipItemInfo);
 	}
 }

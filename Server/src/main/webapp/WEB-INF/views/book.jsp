@@ -30,14 +30,10 @@
 					<li role="presentation"><a role="menuitem" href="bookRental">대여 및 반납</a></li>
 					<li role="presentation"><a role="menuitem" href="bookApply">도서 요청</a></li>
 				</ul>
-			
 			</div>
-			
 			<jsp:include page="base/foot.jsp" flush="false" />
 		</div>
-		
 		<div>
-	
 		<tr>
 			<td>Index</td>
 			<td>이름</td>

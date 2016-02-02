@@ -5,18 +5,29 @@ import javax.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.secsm.command.EquipmentCommand;
-import com.secsm.dao.AccountDao;
+import com.secsm.util.Constant;
 
 @Controller
 public class EquipmentController {
 
-	EquipmentCommand command = null;
+	
+	
+	EquipmentCommand command;
+	
+	public JdbcTemplate template;
+	
+	@Autowired
+	public void setTemplate(JdbcTemplate template) {
+		this.template = template;
+		Constant.template = this.template;
+	}
 	
 	private static final Logger logger = LoggerFactory.getLogger(EquipmentController.class);
 
@@ -28,9 +39,10 @@ public class EquipmentController {
 	}
 	
 	@RequestMapping(value = "/book", method = RequestMethod.GET)
-	public String MainController_book_index(HttpServletRequest request, Model model) {
+	public String MainController_book_index(Model model) {
 		logger.info("book Page");
-		model.addAttribute("request", request);
+		
+		//Book List View
 		command = new EquipmentCommand();
 		command.execute_list(model);
 		return "book";

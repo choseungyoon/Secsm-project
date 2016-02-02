@@ -3,7 +3,7 @@ package com.secsm.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -17,13 +17,18 @@ import org.springframework.jdbc.core.RowMapper;
 import com.secsm.idao.EquipmentItemsIDao;
 import com.secsm.info.DutyInfo;
 import com.secsm.info.EquipmentItemsInfo;
+import com.secsm.util.Constant;
 
 public class EquipmentItemsDao implements EquipmentItemsIDao {
 	private static final Logger logger = LoggerFactory.getLogger(EquipmentItemsDao.class);
 
 	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
-
+	
+	public EquipmentItemsDao(){
+		jdbcTemplate = Constant.template;
+	}
+	
 	public void setDataSource(DataSource ds) {
 		dataSource = ds;
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
@@ -72,10 +77,9 @@ public class EquipmentItemsDao implements EquipmentItemsIDao {
 	public List<EquipmentItemsInfo> list() {
 		
 		String query = "select ID, Name, Type,Count,Statute ,Description from equipment_items";
-		 ArrayList<EquipmentItemsInfo> result = (ArrayList<EquipmentItemsInfo>)jdbcTemplate.query(query, new BeanPropertyRowMapper<EquipmentItemsInfo>(EquipmentItemsInfo.class));
+		List<EquipmentItemsInfo> result = (List<EquipmentItemsInfo>)jdbcTemplate.query(query, new BeanPropertyRowMapper<EquipmentItemsInfo>(EquipmentItemsInfo.class));
 		return result;
 	}
-	
 	
 	public void delete(int id){
 		jdbcTemplate.update("delete from duty where id = ?", new Object[id]);

@@ -73,6 +73,4 @@ public class EquipmentItemsInfo {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
 }
