@@ -32,9 +32,12 @@ public class EquipmentController {
 	private static final Logger logger = LoggerFactory.getLogger(EquipmentController.class);
 
 	@RequestMapping(value = "/equipment", method = RequestMethod.GET)
-	public String MainController_equipment_index(HttpServletRequest request) {
+	public String MainController_equipment_index(HttpServletRequest request,Model model) {
 		logger.info("equipment Page");
-
+		
+		command = new EquipmentCommand();
+		command.execute_list(model,1);
+		
 		return "equipment";
 	}
 	
@@ -44,8 +47,19 @@ public class EquipmentController {
 		
 		//Book List View
 		command = new EquipmentCommand();
-		command.execute_list(model);
+		command.execute_list(model,0);
 		return "book";
+	}
+	
+	@RequestMapping("content_view")
+	public String content_view(HttpServletRequest request, Model model) {
+		logger.info("content_view");
+		
+		model.addAttribute("request", request);
+		command = new EquipmentCommand();
+		command.Content_view(model);
+		
+		return "contentview";
 	}
 	
 	@RequestMapping(value = "/bookSearch", method = RequestMethod.GET)

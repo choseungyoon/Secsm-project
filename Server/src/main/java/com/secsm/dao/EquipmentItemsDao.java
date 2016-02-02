@@ -3,7 +3,7 @@ package com.secsm.dao;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
-
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.sql.DataSource;
@@ -74,11 +74,26 @@ public class EquipmentItemsDao implements EquipmentItemsIDao {
 				});
 	}
 	
-	public List<EquipmentItemsInfo> list() {
+	//book or equipment list view
+	public ArrayList<EquipmentItemsInfo> list(int type) {
+		ArrayList<EquipmentItemsInfo> result = null;
+		String query = null;
+		if(type == 0){
+			query = "select id, name, type,count,statute ,description from equipment_items where type = 0";
+		}
+		else if(type ==1){
+			query = "select id, name, type,count,statute ,description from equipment_items where type = 1";	
+		}
 		
-		String query = "select ID, Name, Type,Count,Statute ,Description from equipment_items";
-		List<EquipmentItemsInfo> result = (List<EquipmentItemsInfo>)jdbcTemplate.query(query, new BeanPropertyRowMapper<EquipmentItemsInfo>(EquipmentItemsInfo.class));
+		result = (ArrayList<EquipmentItemsInfo>)jdbcTemplate.query(query, new BeanPropertyRowMapper<EquipmentItemsInfo>(EquipmentItemsInfo.class));
 		return result;
+	}
+	
+	//Content detail view
+	
+	public EquipmentItemsInfo contentView(String id){
+		String query = "select * from equipment_items where id = " + id;
+		return jdbcTemplate.queryForObject(query, new BeanPropertyRowMapper<EquipmentItemsInfo>(EquipmentItemsInfo.class));
 	}
 	
 	public void delete(int id){

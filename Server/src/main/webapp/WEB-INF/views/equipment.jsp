@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@page import="com.secsm.info.EquipmentTypeInfo"%>
 <%@page import="java.util.ArrayList"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page pageEncoding="utf-8" %>
 
 <html>
@@ -62,6 +63,31 @@
 				</ul>
 			
 			</div>
+			<!-- ListView -->
+			<div>
+		<table width="500" cellpadding="0" cellspacing="0" border="1">
+		<tr>
+			<td>Index</td>
+			<td>이름</td>
+			<td>Type</td>
+			<td>재고</td>
+			<td>상태</td>
+			<td>세부사항</td>
+			<br/>
+		</tr>
+		<c:forEach items="${list}" var="dto">
+		<tr>
+			<td>${dto.id}</td>
+			<td>${dto.name}</td>
+			<td>${dto.type}</td>
+			<td>${dto.count}</td>
+			<td>${dto.statute}</td>
+			<td>${dto.description}</td>
+			<br/>
+		</tr>
+		</c:forEach>
+		</table>
+		</div>
 			
 			<!-- 장비 검색 -->
 			<div name="divSearch" id="divSearch" style="display: none;">

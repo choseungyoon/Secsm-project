@@ -10,10 +10,14 @@ public class EquipmentItemsInfo {
 	private int type;
 	private Timestamp regDate;
 	private int count;
-	private int status;
+	private int statute;
 	private String description;
 	
-	public EquipmentItemsInfo(int id, String code, String name, int type, Timestamp regDate, int count, int status,
+	public  EquipmentItemsInfo(){
+		
+	}
+	
+	public EquipmentItemsInfo(int id, String code, String name, int type, Timestamp regDate, int count, int statute,
 			String description) {
 		this.id = id;
 		this.code = code;
@@ -21,7 +25,7 @@ public class EquipmentItemsInfo {
 		this.type = type;
 		this.regDate = regDate;
 		this.count = count;
-		this.status = status;
+		this.statute = statute;
 		this.description = description;
 	}
 	
@@ -61,11 +65,11 @@ public class EquipmentItemsInfo {
 	public void setCount(int count) {
 		this.count = count;
 	}
-	public int getStatus() {
-		return status;
+	public int getStatute() {
+		return statute;
 	}
-	public void setStatus(int status) {
-		this.status = status;
+	public void setStatute(int status) {
+		this.statute = status;
 	}
 	public String getDescription() {
 		return description;

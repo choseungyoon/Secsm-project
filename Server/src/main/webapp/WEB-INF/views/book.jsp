@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <%@page import="java.util.ArrayList"%>
 <%@ page pageEncoding="utf-8" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 	<head>
 		<!-- Encoding -->
@@ -20,7 +20,7 @@
 				<ul >
 					<form action="bookSearch" method="get">
 					<tr>
-						<td> 제목 </td>
+						<td> 검색 </td>
 						<td> <input type="text" name="bTitle" size = "50"> </td>
 					</tr>
 					<tr >
@@ -34,26 +34,26 @@
 			<jsp:include page="base/foot.jsp" flush="false" />
 		</div>
 		<div>
+		<table width="500" cellpadding="0" cellspacing="0" border="1">
 		<tr>
 			<td>Index</td>
 			<td>이름</td>
 			<td>Type</td>
 			<td>재고</td>
 			<td>상태</td>
-			<td>세부사항</td>
+			<br/>
 		</tr>
-<!--		<c:forEach items="${list}" var="dto">
+		<c:forEach items="${list}" var="dto">
 		<tr>
-			<td>${dto.ID}</td>
-			<td>${dto.Name}</td>
-			<td>${dto.Type}</td>
-			<td>${dto.Count}</td>
-			<td>${dto.Statute}</td>
-			<td>${dto.Description}</td>
+			<td>${dto.id}</td>
+			<td><a href="content_view?id=${dto.id}">${dto.name}</a></td>
+			<td>${dto.type}</td>
+			<td>${dto.count}</td>
+			<td>${dto.statute}</td>
+			<br/>
 		</tr>
-		</c:forEach>-->
-		
+		</c:forEach>
+		</table>
 		</div>
-
 </body>
 </html>
